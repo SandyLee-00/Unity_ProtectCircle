@@ -19,4 +19,13 @@ public class square : MonoBehaviour
     {
         
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "Ballon")
+        {
+            gameManager.I.gameOver();
+            Debug.Log("@square col ballon");
+        }
+    }
 }
