@@ -341,6 +341,7 @@ MonoBehaviour:
   square: {fileID: 2296882173193324288, guid: 2856d84af553c46259665317b6e1bd3e, type: 3}
   endPanel: {fileID: 1408192259}
   timeTxt: {fileID: 1147374210}
+  txt_myScore: {fileID: 856003156}
 --- !u!4 &732139262
 Transform:
   m_ObjectHideFlags: 0
@@ -367,7 +368,7 @@ GameObject:
   - component: {fileID: 856003157}
   - component: {fileID: 856003156}
   m_Layer: 5
-  m_Name: txt-myScore
+  m_Name: txt_myScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -446,7 +447,7 @@ GameObject:
   - component: {fileID: 919466652}
   - component: {fileID: 919466651}
   m_Layer: 5
-  m_Name: label-bestScore
+  m_Name: label_bestScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -604,7 +605,7 @@ GameObject:
   - component: {fileID: 1168065366}
   - component: {fileID: 1168065365}
   m_Layer: 5
-  m_Name: label-myScore
+  m_Name: label_myScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -683,7 +684,7 @@ GameObject:
   - component: {fileID: 1180810673}
   - component: {fileID: 1180810672}
   m_Layer: 5
-  m_Name: label-restart
+  m_Name: label_restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1009,7 +1010,7 @@ GameObject:
   - component: {fileID: 1407482516}
   - component: {fileID: 1407482515}
   m_Layer: 5
-  m_Name: txt-bestScore
+  m_Name: txt_bestScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1107,7 +1108,7 @@ RectTransform:
   - {fileID: 2030054460}
   - {fileID: 531778163}
   - {fileID: 1337920092}
-  - {fileID: 1573375521}
+  - {fileID: 1965752110}
   m_Father: {fileID: 1500083053}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1299,42 +1300,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &1573375520
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1573375521}
-  m_Layer: 5
-  m_Name: restart
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1573375521
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1573375520}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1965752110}
-  m_Father: {fileID: 1408192260}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -200}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1965752109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1348,7 +1313,7 @@ GameObject:
   - component: {fileID: 1965752112}
   - component: {fileID: 1965752111}
   m_Layer: 5
-  m_Name: btn-restart
+  m_Name: btn_restart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1361,17 +1326,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965752109}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1180810671}
-  m_Father: {fileID: 1573375521}
-  m_RootOrder: 0
+  m_Father: {fileID: 1408192260}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -200}
   m_SizeDelta: {x: 300, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1965752111
@@ -1417,7 +1382,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1965752112}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 732139261}
+        m_TargetAssemblyTypeName: gameManager, Assembly-CSharp
+        m_MethodName: restart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1965752112
 MonoBehaviour:
   m_ObjectHideFlags: 0

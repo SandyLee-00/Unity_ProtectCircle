@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class gameManager : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class gameManager : MonoBehaviour
     public Text timeTxt;
     float time = 0.0f;
 
+    public Text txt_myScore;
+
+    bool isRunning = true;
+
     private void Awake()
     {
         I = this;
@@ -20,13 +25,17 @@ public class gameManager : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1.0f;
         InvokeRepeating("makeSquare", 0.0f, 0.5f);
     }
 
     void Update()
     {
-        time += Time.deltaTime;
-        timeTxt.text = time.ToString("N1");
+        if (isRunning)
+        {
+            time += Time.deltaTime;
+            timeTxt.text = time.ToString("N1");
+        }        
     }
 
     void makeSquare()
@@ -36,7 +45,14 @@ public class gameManager : MonoBehaviour
 
     public void gameOver()
     {
+        isRunning = false;
         Time.timeScale = 0.0f;
+        txt_myScore.text = time.ToString("N1");
         endPanel.SetActive(true);
+    }
+
+    public void restart()
+    {
+        SceneManager.LoadScene("MainScene");
     }
 }
