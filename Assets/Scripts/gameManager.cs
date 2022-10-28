@@ -15,6 +15,7 @@ public class gameManager : MonoBehaviour
     float time = 0.0f;
 
     public Text txt_myScore;
+    public Text txt_bestScore;
 
     bool isRunning = true;
 
@@ -48,6 +49,17 @@ public class gameManager : MonoBehaviour
         isRunning = false;
         Time.timeScale = 0.0f;
         txt_myScore.text = time.ToString("N1");
+
+        if(PlayerPrefs.HasKey("bestScore") == false)
+        {
+            PlayerPrefs.SetFloat("bestScore", time);
+        }
+        else if(PlayerPrefs.GetFloat("bestScore") < time)
+        {
+            PlayerPrefs.SetFloat("bestScore", time);
+        }
+        txt_bestScore.text = PlayerPrefs.GetFloat("bestScore").ToString("N1");
+
         endPanel.SetActive(true);
     }
 
@@ -55,4 +67,5 @@ public class gameManager : MonoBehaviour
     {
         SceneManager.LoadScene("MainScene");
     }
+
 }
