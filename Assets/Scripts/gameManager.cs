@@ -19,6 +19,8 @@ public class gameManager : MonoBehaviour
 
     bool isRunning = true;
 
+    public Animator ballonAnim;
+
     private void Awake()
     {
         I = this;
@@ -47,7 +49,8 @@ public class gameManager : MonoBehaviour
     public void gameOver()
     {
         isRunning = false;
-        Time.timeScale = 0.0f;
+        ballonAnim.SetBool("isPop", true);
+
         txt_myScore.text = time.ToString("N1");
 
         if(PlayerPrefs.HasKey("bestScore") == false)
@@ -61,6 +64,8 @@ public class gameManager : MonoBehaviour
         txt_bestScore.text = PlayerPrefs.GetFloat("bestScore").ToString("N1");
 
         endPanel.SetActive(true);
+
+        Invoke("timeStop", 0.5f);
     }
 
     public void restart()
@@ -68,4 +73,8 @@ public class gameManager : MonoBehaviour
         SceneManager.LoadScene("MainScene");
     }
 
+    private void timeStop()
+    {
+        Time.timeScale = 0.0f;
+    }
 }

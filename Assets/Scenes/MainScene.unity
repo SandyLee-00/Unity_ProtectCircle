@@ -343,6 +343,7 @@ MonoBehaviour:
   timeTxt: {fileID: 1147374210}
   txt_myScore: {fileID: 856003156}
   txt_bestScore: {fileID: 1407482515}
+  ballonAnim: {fileID: 1391576156}
 --- !u!4 &732139262
 Transform:
   m_ObjectHideFlags: 0
@@ -1093,7 +1094,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1408192260
 RectTransform:
   m_ObjectHideFlags: 0
