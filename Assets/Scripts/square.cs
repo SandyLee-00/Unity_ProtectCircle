@@ -17,7 +17,11 @@ public class square : MonoBehaviour
 
     void Update()
     {
-        
+        float posY = transform.position.y;
+        if(posY < -7.0f)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
